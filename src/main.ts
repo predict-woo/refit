@@ -30,9 +30,9 @@ async function bootstrap() {
   app.useGlobalInterceptors(new ClassSerializerInterceptor(app.get(Reflector)));
 
   const options = new DocumentBuilder()
-    .setTitle('API')
-    .setDescription('API docs')
-    .setVersion('1.0')
+    .setTitle('Refit API')
+    .setDescription('Refit API docs')
+    .setVersion('0.0')
     .addBearerAuth()
     .build();
 
