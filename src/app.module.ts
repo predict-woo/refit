@@ -24,6 +24,9 @@ import { AllConfigType } from './config/config.type';
 import { SessionModule } from './session/session.module';
 import { MailerModule } from './mailer/mailer.module';
 import { InfoModule } from './info/info.module';
+import { AuthNaverController } from './auth-naver/auth-naver.controller';
+import { AuthNaverService } from './auth-naver/auth-naver.service';
+import { AuthNaverModule } from './auth-naver/auth-naver.module';
 
 @Module({
   imports: [
@@ -79,6 +82,9 @@ import { InfoModule } from './info/info.module';
     MailerModule,
     HomeModule,
     InfoModule,
+    AuthNaverModule,
   ],
+  controllers: [AuthNaverController],
+  providers: [AuthNaverService],
 })
 export class AppModule {}
