@@ -28,6 +28,7 @@ import { AuthNaverController } from './auth-naver/auth-naver.controller';
 import { AuthNaverService } from './auth-naver/auth-naver.service';
 import { AuthNaverModule } from './auth-naver/auth-naver.module';
 import { AuthFirebaseModule } from './auth-firebase/auth-firebase.module';
+import firebaseConfig from './auth-firebase/config/firebase.config';
 
 @Module({
   imports: [
@@ -41,6 +42,7 @@ import { AuthFirebaseModule } from './auth-firebase/auth-firebase.module';
         fileConfig,
         googleConfig,
         appleConfig,
+        firebaseConfig,
       ],
       envFilePath: ['.env'],
     }),
