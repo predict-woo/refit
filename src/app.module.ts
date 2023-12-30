@@ -27,6 +27,7 @@ import { InfoModule } from './info/info.module';
 import { AuthNaverController } from './auth-naver/auth-naver.controller';
 import { AuthNaverService } from './auth-naver/auth-naver.service';
 import { AuthNaverModule } from './auth-naver/auth-naver.module';
+import { AuthFirebaseModule } from './auth-firebase/auth-firebase.module';
 
 @Module({
   imports: [
@@ -83,6 +84,7 @@ import { AuthNaverModule } from './auth-naver/auth-naver.module';
     HomeModule,
     InfoModule,
     AuthNaverModule,
+    AuthFirebaseModule,
   ],
   controllers: [AuthNaverController],
   providers: [AuthNaverService],
