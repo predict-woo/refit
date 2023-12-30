@@ -86,7 +86,5 @@ import { AuthFirebaseModule } from './auth-firebase/auth-firebase.module';
     AuthNaverModule,
     AuthFirebaseModule,
   ],
-  controllers: [AuthNaverController],
-  providers: [AuthNaverService],
 })
 export class AppModule {}
