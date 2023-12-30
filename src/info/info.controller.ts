@@ -57,4 +57,10 @@ export class InfoController {
   update(@Request() request, @Body() infoDto: CreateInfoDto): Promise<Info> {
     return this.infoService.update(request.user, infoDto);
   }
+
+  @Get('nicknameCheck')
+  @HttpCode(HttpStatus.OK)
+  nicknameCheck(@Body() nickname: string): Promise<boolean> {
+    return this.infoService.nicknameCheck(nickname);
+  }
 }

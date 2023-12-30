@@ -15,6 +15,9 @@ export class Info extends EntityHelper {
   id: number;
 
   @Column()
+  nickname: string;
+
+  @Column()
   yoe: number;
 
   @OneToMany(() => WorkoutStyle, (WorkoutStyle) => WorkoutStyle.info)

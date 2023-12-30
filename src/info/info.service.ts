@@ -52,4 +52,12 @@ export class InfoService {
     info.workoutStyles = infoDto.workoutStyles;
     return this.infoRepository.save(info);
   }
+
+  async nicknameCheck(nickname: string): Promise<boolean> {
+    const info = await this.infoRepository.findOne({
+      where: { nickname },
+    });
+
+    return info ? false : true;
+  }
 }
